@@ -3,9 +3,9 @@ using BoredDTO;
 
 namespace BoredApi.Data
 {
-    public class ApplicationDbContext :DbContext
+    public class BoredDbContext :DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public BoredDbContext(DbContextOptions<BoredDbContext> options)
             : base(options)
         {
         }

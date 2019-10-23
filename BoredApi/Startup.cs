@@ -13,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.OpenApi.Models;
 
 
 namespace BoredApi
@@ -31,12 +32,12 @@ namespace BoredApi
         {
             services.AddControllers();
 
-            services.AddDbContext<ApplicationDbContext>(options => 
+            services.AddDbContext<BoredDbContext>(options => 
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1", new Info 
+                options.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
                     Title = "Bored API",                     
