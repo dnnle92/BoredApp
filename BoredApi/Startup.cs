@@ -14,7 +14,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.OpenApi.Models;
-
+using BoredApi.Data.EFCore;
 
 namespace BoredApi
 {
@@ -34,6 +34,8 @@ namespace BoredApi
 
             services.AddDbContext<BoredDbContext>(options => 
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<EFCoreResponseRepository>();
 
             services.AddSwaggerGen(options =>
             {

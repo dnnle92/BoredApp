@@ -3,14 +3,16 @@ using BoredApi.Data.EFCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BoredApi.Migrations
 {
     [DbContext(typeof(BoredDbContext))]
-    partial class BoredDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191028180824_added repository")]
+    partial class addedrepository
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

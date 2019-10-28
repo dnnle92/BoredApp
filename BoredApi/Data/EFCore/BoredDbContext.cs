@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using BoredDTO;
 
-namespace BoredApi.Data
+namespace BoredApi.Data.EFCore
 {
     public class BoredDbContext :DbContext
     {

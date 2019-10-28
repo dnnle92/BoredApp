@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BoredDTO
 {
-    public class Response
+    public class Response : IEntity
     {
         public int Id { get; set; }
         public string Activity { get; set; }
