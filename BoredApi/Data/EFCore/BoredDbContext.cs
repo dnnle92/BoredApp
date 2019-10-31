@@ -1,5 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using BoredDTO;
+﻿using BoredApi.Models;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace BoredApi.Data.EFCore
 {

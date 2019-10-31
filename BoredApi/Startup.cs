@@ -32,8 +32,16 @@ namespace BoredApi
         {
             services.AddControllers();
 
-            services.AddDbContext<BoredDbContext>(options => 
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            var server = Configuration["DBServer"] ?? "localhost";
+            var port = Configuration["DBPort"] ?? "1433";
+            var user = Configuration["DBUser"] ?? "SA";
+            var password = Configuration["DBPassword"] ?? "Pwd@1234";
+            var database = Configuration["Database"] ?? "Bored";
+
+            services.AddDbContext<BoredDbContext>(options =>
+            options.UseSqlServer($"Server={server},{port};Database={database};User ID={user};Password={password}"));
+           
+            //(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddScoped<EFCoreResponseRepository>();
 
@@ -55,8 +63,6 @@ namespace BoredApi
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 

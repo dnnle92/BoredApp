@@ -6,8 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using BoredApi.Data;
-using BoredDTO;
 using BoredApi.Data.EFCore;
+using BoredApi.Models;
 
 namespace BoredApi.Controllers
 {
