@@ -3,7 +3,7 @@
   <PropertyGroup Label="Globals">
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
-    <ProjectGuid>1325527b-3db7-404a-a32a-af24c75e71cb</ProjectGuid>
+    <ProjectGuid>ded4b11e-38d1-48f0-bd4a-3d90d8adc41a</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>boredapi</DockerServiceName>

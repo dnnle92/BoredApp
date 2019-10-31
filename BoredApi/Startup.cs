@@ -15,6 +15,7 @@ using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.OpenApi.Models;
 using BoredApi.Data.EFCore;
+using BoredApi.Models;
 
 namespace BoredApi
 {
@@ -32,7 +33,7 @@ namespace BoredApi
         {
             services.AddControllers();
 
-            var server = Configuration["DBServer"] ?? "localhost";
+            var server = Configuration["DBServer"] ?? "db";
             var port = Configuration["DBPort"] ?? "1433";
             var user = Configuration["DBUser"] ?? "SA";
             var password = Configuration["DBPassword"] ?? "Pwd@1234";
@@ -65,6 +66,8 @@ namespace BoredApi
             }
 
             app.UseRouting();
+
+            PrepDb.PrepPopulation(app);
 
             app.UseSwagger();
 
