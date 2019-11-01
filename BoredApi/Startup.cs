@@ -33,7 +33,7 @@ namespace BoredApi
         {
             services.AddControllers();
 
-            var server = Configuration["DBServer"] ?? "db";
+            var server = Configuration["DBServer"] ?? "localhost";
             var port = Configuration["DBPort"] ?? "1433";
             var user = Configuration["DBUser"] ?? "SA";
             var password = Configuration["DBPassword"] ?? "Pwd@1234";
